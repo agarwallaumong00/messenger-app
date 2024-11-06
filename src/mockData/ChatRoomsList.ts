@@ -1,6 +1,6 @@
-import { ChatList } from "models/MessengeApp";
+import { ChatRoom } from "models/MessengeApp";
 
-const chatsList: ChatList[] = [
+const ChatRoomsList: ChatRoom[] = [
     {
         "id": 1,
         "name": "Alice Johnson",
@@ -23,4 +23,4 @@ const chatsList: ChatList[] = [
     }
 ]
 
-export default chatsList;
+export default ChatRoomsList;

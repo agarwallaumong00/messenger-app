@@ -2,7 +2,9 @@ import './MessengerApp.scss';
 
 const MessengerApp = () => {
     return (
-        <>MessengerApp</>
+        <div className='messenger-app'>
+            
+        </div>
     )
 }
 

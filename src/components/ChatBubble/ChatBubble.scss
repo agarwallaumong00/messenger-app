@@ -1,0 +1,29 @@
+@import 'styles/config.scss';
+
+.chat-bubble {
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 8px;
+    flex-wrap: wrap;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 16px;
+    word-break: break-word;
+    @include f-inter-normal(14);
+
+    &.received {
+        align-self: flex-start;
+        background: white;
+    }
+
+    &.sent {
+        background: #0066ff;
+        color: white;
+        align-self: flex-end;
+    }
+
+    .time-stamp {
+        align-self: flex-end;
+        @include f-inter-normal(10);
+    }
+}

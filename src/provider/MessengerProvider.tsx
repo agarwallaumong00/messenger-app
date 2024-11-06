@@ -3,7 +3,8 @@ import { createContext, ReactNode, useContext } from "react";
 
 const initialContext: UseMessengerReturnType = {
     selectedRoom: undefined,
-    setSelectedRoom: () => {}
+    roomChatData: [],
+    onRoomSelect: () => {}
 };
 
 const MessengerContext = createContext(initialContext);

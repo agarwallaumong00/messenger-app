@@ -1,19 +1,26 @@
 import { useEffect, useState } from "react";
 
-import { ChatRoom } from "models/MessengeApp";
+import { ChatRoom, ChatRoomData } from "models/MessengeApp";
 import ChatRoomsList from "mockData/ChatRoomsList";
+import RoomDataMapping from "mockData/RoomData";
 
 const useMessengerInternal = () => {
     const [selectedRoom, setSelectedRoom] = useState<ChatRoom | undefined>(undefined);
+    const [roomChatData, setRoomChatData] = useState<ChatRoomData[]>([]);
 
     useEffect(() => {
-        setSelectedRoom(ChatRoomsList[0]);
+        onRoomSelect(ChatRoomsList[0]);
     }, [])
 
+    const onRoomSelect = (room: ChatRoom) => {
+        setSelectedRoom(room);
+        setRoomChatData(RoomDataMapping[room.id]);
+    }
 
     return {
         selectedRoom,
-        setSelectedRoom
+        roomChatData,
+        onRoomSelect,
     }
 }
 

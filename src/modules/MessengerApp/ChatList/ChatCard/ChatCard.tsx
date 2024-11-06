@@ -11,12 +11,12 @@ interface Props {
 }
 
 const ChatCard = (props: Props) => {
-    const { setSelectedRoom } = useMessenger();
+    const { onRoomSelect } = useMessenger();
     const { chat, isActive } = props;
     const { name, lastMessage } = chat;
 
     return (
-        <div className={`chat-card${isActive ? ' active' : ''}`} onClick={() => setSelectedRoom(chat)}>
+        <div className={`chat-card${isActive ? ' active' : ''}`} onClick={() => onRoomSelect(chat)}>
             <Avatar name={name} />
             <div className='info'>
                 <p className='user-name'>{name}</p>

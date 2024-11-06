@@ -1,9 +1,6 @@
 @import 'styles/config.scss';
 
 .avatar {
-    width: 52px;
-    min-width: 52px;
-    height: 52px;
     border-radius: 100%;
     background: purple;
     border: 1px solid rgba(8, 12, 11, 0.1);
@@ -12,5 +9,25 @@
     span {
         color: white;
         @include f-inter-bold(18);
+    }
+
+    &.size-lg {
+        width: 52px;
+        min-width: 52px;
+        height: 52px;
+
+        span {
+            @include f-inter-bold(18);
+        }
+    }
+
+    &.size-sm {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+
+        span {
+            @include f-inter-bold(16);
+        }
     }
 }

@@ -1,1 +1,53 @@
 @import 'styles/config.scss';
+
+.chat-window {
+    width: 70%;
+    position: relative;
+
+    .room-info {
+        height: 60px;
+        padding: 10px;
+        column-gap: 10px;
+        border-bottom: 0.5px solid rgba(8, 12, 11, 0.3);
+        @include flex(center);
+
+        .room-title {
+            @include f-inter-bold(18);
+        }
+    }
+
+    .chat-box {
+        height: calc(100% - 120px);
+        max-height: calc(100% - 120px);
+        overflow: auto;
+        background: #e6e7e7;
+        row-gap: 10px;
+        @include flex-column;
+    }
+
+    .chat-input {
+        height: 60px;
+        padding: 10px 20px;
+        column-gap: 20px;
+        border-top: 0.5px solid rgba(8, 12, 11, 0.3);
+        @include flex;
+
+        .input-box {
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #bdbdbd;
+        }
+
+        .send-msg {
+            background: #0066ff;
+            color: white;
+            border: 1px solid #0066ff;
+            border-radius: 8px;
+            padding: 6px 11px;
+            cursor: pointer;
+            @include f-inter-normal(14);
+        }
+    }
+}

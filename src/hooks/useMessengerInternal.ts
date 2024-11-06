@@ -17,10 +17,22 @@ const useMessengerInternal = () => {
         setRoomChatData(RoomDataMapping[room.id]);
     }
 
+    const sendMessage = (message: string) => {
+        if (selectedRoom) {
+            RoomDataMapping[selectedRoom.id].push({
+                isReceived: false,
+                message,
+                timestamp: (new Date()).toISOString()
+            });
+            setRoomChatData(RoomDataMapping[selectedRoom.id]);
+        }
+    }
+
     return {
         selectedRoom,
         roomChatData,
         onRoomSelect,
+        sendMessage
     }
 }
 

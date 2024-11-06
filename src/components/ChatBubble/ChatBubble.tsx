@@ -1,8 +1,10 @@
 import { useMemo } from 'react';
+
+import moment from 'moment';
+
 import { ChatRoomData } from 'models/MessengeApp';
 
 import './ChatBubble.scss';
-import moment from 'moment';
 
 interface Props {
     data: ChatRoomData

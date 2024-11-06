@@ -11,6 +11,8 @@
     }
 
     .chats-wrapper {
+        height: calc(100% - 42px);
+        overflow: auto;
         @include flex-column;
     }
 

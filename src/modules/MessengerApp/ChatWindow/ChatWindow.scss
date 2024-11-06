@@ -18,13 +18,13 @@
 
     .chat-box {
         height: calc(100% - 120px);
+        min-height: calc(100% - 120px);
         max-height: calc(100% - 120px);
         overflow: auto;
         background: #e6e7e7;
         padding: 10px;
         row-gap: 10px;
-        flex-direction: column-reverse;
-        @include flex-column(null, flex-end);
+        @include flex-column();
     }
 
     .chat-input {

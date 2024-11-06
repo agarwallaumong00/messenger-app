@@ -9,6 +9,8 @@
     padding: 6px 12px;
     border-radius: 16px;
     word-break: break-word;
+    min-width: 80px;
+    max-width: 70%;
     @include f-inter-normal(14);
 
     &.received {

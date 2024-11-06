@@ -1,0 +1,21 @@
+@import 'styles/config.scss';
+
+.chat-lists {
+    width: 30%;
+    padding: 20px;
+    border-right: 1px solid #f2ecec;
+
+    .title {
+        margin-bottom: 20px;
+        @include f-inter-semi-bold(18);
+    }
+
+    .chats-wrapper {
+        @include flex-column;
+    }
+
+    .divider {
+        margin: 8px 0;
+        border-top: 0.5px solid rgba(8, 12, 11, 0.3);
+    }
+}

@@ -1,0 +1,35 @@
+@import 'styles/config.scss';
+
+.chat-card {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    column-gap: 10px;
+    @include flex;
+
+    &:hover {
+        background: #ecedee;
+    }
+
+    &.active {
+        background: #e6e7e7;
+    }
+
+    .info {
+        width: 100%;
+        row-gap: 10px;
+        @include flex-column;
+
+        .user-name {
+            @include f-inter-medium(16);
+        }
+
+        .last-msg {
+            width: calc(100% - 62px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include f-inter-normal(14);
+        }
+    }
+}

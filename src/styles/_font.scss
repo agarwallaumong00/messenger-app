@@ -1,0 +1,32 @@
+// Inter
+@mixin f-inter($font-size: null) {
+    font-family: 'Inter';
+    @if $font-size {
+        font-size: #{$font-size}px;
+    }
+}
+
+@mixin f-inter-normal($font-size: null) {
+    @include f-inter($font-size);
+    font-weight: 400;
+}
+
+@mixin f-inter-medium($font-size: null) {
+    @include f-inter($font-size);
+    font-weight: 500;
+}
+
+@mixin f-inter-semi-bold($font-size: null) {
+    @include f-inter($font-size);
+    font-weight: 600;
+}
+
+@mixin f-inter-bold($font-size: null) {
+    @include f-inter($font-size);
+    font-weight: 700;
+}
+
+@mixin f-inter-extra-bold($font-size: null) {
+    @include f-inter($font-size);
+    font-weight: 800;
+}

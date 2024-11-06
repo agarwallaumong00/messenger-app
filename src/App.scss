@@ -1,0 +1,6 @@
+@import 'styles/config.scss';
+
+.App {
+    padding: 20px;
+    @include flex-center;
+}
